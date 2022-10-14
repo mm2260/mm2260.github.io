@@ -1,0 +1,31 @@
+---
+import Separator from "./Separator.astro";
+---
+
+<h1 class='text-center text-2xl font-mono mb-6'>
+    <span class='px-4 bg-amber-200 
+                 border-2 border-zinc-900 border-dashed
+                 shadow-lg shadow-amber-900/20'>
+            Caution!</span>
+</h1>
+<p class='flex-col justify-center align-center text-center'>
+    <span>Hi! While I'm glad you're here,</span>
+    <br>
+    <span>
+        I regrettably have to inform you that this website is 
+        <span class='underline decoration-wavy
+                     decoration-rose-500 
+                    transition ease-in-out delay-90 
+                    hover:bg-rose-100'>
+            still under construction</span>...
+    </span>
+</p>
+<div class='flex justify-center align-center'>
+    <img class='w-40' src='/images/cat.svg'>
+    <img class='w-24' src='/images/caution.svg'>
+</div>
+<p class='mt-3 text-center'>
+    Maybe check back in a day or two? Thanks!
+</p>
+
+<Separator />

@@ -1,0 +1,134 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Content from "../layouts/Content.astro";
+import Marquee from "../components/Marquee.astro";
+import Separator from "../components/Separator.astro";
+import Construction from "../components/Construction.astro";
+---
+
+<Layout>
+    <div class='flex-col iterms-start'>
+        <Content>
+            <h1 class='flex justify-center text-xl font-bold'>Abstract</h1>
+            <div>
+                <p>
+                    If you're reading this, then that means you've found my personal website – 
+                    <span class=''>Hi! I'm glad you're here! </span>
+                </p>
+                <br>
+                <p class='flex-wrap'>
+                    I'm Mohammed Mehboob, a 5th-year senior at the 
+                    <a class='font-bold' href='https://www.rit.edu'>Rochester Institute of Technology</a> 
+                    majoring in 
+                    <span class='underline font-mono decoration-wavy 
+                                 decoration-red-500 
+                                 transition ease-in-out delay-90 
+                                 hover:bg-rose-100'>Computer Science</span>, 
+                    minoring in 
+                    <span class='underline font-mono decoration-wavy 
+                                 decoration-blue-500 
+                                 transition ease-in-out delay-90 
+                                 hover:bg-sky-100'>Mathematics</span>.
+                </p>
+                <br>
+            </div>
+        </Content>
+        <Content>
+            <div class='flex gap-2'>
+                <p class='lg:whitespace-nowrap'>
+                    I'm passionate about the fields of
+                </p>
+                <div class='grow-0'>
+                    <Marquee members={ ['Cryptography', 
+                                        'Data Privacy', 
+                                        'Data Science', 
+                                        'Responsible AI', 
+                                        'Parallel Computing'] } 
+                    style="mx-1 px-1 font-mono transition ease-in-out delay-50\
+                           bg-slate-200 hover:bg-black hover:text-white hover:underline"/>
+                </div>
+            </div>            
+        </Content>
+        <Content>
+            <p>
+                Over my time at RIT, I have involved myself in the study of cryptography, computer science theory, 
+                and data science through coursework, some degree of independent research, and self-driven project-work.
+                Some of my relevant coursework includes: 
+                <span class='underline font-mono 
+                             decoration-wavy decoration-purple-500 
+                             transition ease-in-out delay-90 
+                             hover:bg-purple-100'>Post-Quantum Cryptography</span>, 
+                <span class='underline font-mono 
+                             decoration-wavy decoration-sky-600 
+                             transition ease-in-out delay-90 
+                             hover:bg-sky-100'>Number Theory</span>, 
+                <span class='underline font-mono 
+                             decoration-wavy decoration-teal-600 
+                             transition ease-in-out delay-90 
+                             hover:bg-cyan-100'>Principles of Data Mining</span>, 
+                <span class='underline font-mono 
+                             decoration-wavy decoration-lime-600 
+                             transition ease-in-out delay-90 
+                             hover:bg-green-100'>Introduction to AI</span>, 
+                <span class='underline font-mono 
+                             decoration-wavy decoration-amber-500 
+                             transition ease-in-out delay-90 
+                             hover:bg-amber-100'>Linear Algebra</span>, 
+                and so forth.
+            </p>
+        </Content>
+        <br><br>
+        <Content>
+            <span>
+                Additionally, I am also fascinated by the topics and areas of study of 
+                <span class='group'>
+                    <span class='px-1 text-white bg-black hover:underline group-hover:px-3'>Moral Philosophy,</span> 
+                    <blockquote class="hidden group-hover:block
+                                       p-4 my-2 border-l-4 
+                                       border-rose-600 bg-stone-100">
+                        <p class="italic font-medium leading-relaxed">
+                            for its wide-ranging implications to the field of Computer Science, 
+                            such as the ethics underlying data-collection practices 
+                            and the nature of authorship in the age of generative AI.
+                        </p>
+                    </blockquote>
+                </span>
+                <span class='group'>
+                    <span class='px-1 text-white bg-black hover:underline group-hover:px-3'>Anti-Design,</span> 
+                    <blockquote class="hidden group-hover:block 
+                                       p-4 my-2 border-l-4 
+                                       border-stone-500 bg-stone-100">
+                        <p class="italic font-medium leading-relaxed">
+                            for the challenge it poses to traditional ideas about design and aesthetics, 
+                            and as a tool to subvert dominant cultures and norms.
+                        </p>
+                    </blockquote>
+                </span> and 
+                <span class='group'>
+                    <span class='px-1 text-white bg-black hover:underline group-hover:px-3'>AR/VR Technology.</span> 
+                    <blockquote class="hidden group-hover:block
+                                       p-4 my-2 border-l-4 
+                                       border-blue-600 bg-stone-100 ">
+                        <p class="italic font-medium leading-relaxed">
+                            for the potential it holds as a tool for education; 
+                            to engage learners in a way that traditional education methods cannot.
+                        </p>
+                    </blockquote>
+                </span>
+            </span>
+            
+        </Content>
+    </div>
+
+    <div class='m-10'>
+        <br>
+    </div>
+
+    <Content>
+        <Separator/>
+        <h1 class='text-center text-xl'>There is more to come...</h1>
+        <Construction/>
+    </Content>
+    
+
+</Layout>

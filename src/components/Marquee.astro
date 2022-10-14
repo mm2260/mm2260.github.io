@@ -1,0 +1,18 @@
+---
+export interface Props {
+    members : Array<String>;
+    style: string;
+}
+
+const {members, style} = Astro.props;
+---
+
+<div class='pb-1 flex grow-0 lg:w-3/5 relative overflow-x-hidden'>
+    <div class="animate-marquee lg:whitespace-nowrap">
+        {members.map((member) => [(<span class={style}>{member}</span>),<span class='-ml-1 mr-1'>,</span>])}
+    </div>
+
+    <div class="absolute top-0 animate-marquee2 lg:whitespace-nowrap">
+        {members.map((member) => [(<span class={style}>{member}</span>),<span class='-ml-1 mr-1'>,</span>])}
+    </div>
+</div>

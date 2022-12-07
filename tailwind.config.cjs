@@ -6,6 +6,9 @@ module.exports = {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
 		extend: {
+			screens: {
+				'test' : '2000px'
+			},
 			fontFamily: {
 				mono: ["'Computer Modern Typewriter'", defaultTheme.fontFamily.mono ]
 			},

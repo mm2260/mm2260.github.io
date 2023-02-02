@@ -1,16 +1,8 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import Content from "../../layouts/Content.astro";
-import Construction from "../../components/Construction.astro";
-import Marquee from "../../components/Marquee.astro";
+import Post from "../../layouts/Post.astro";
 ---
 
-<Layout>
-    <Content>
-        <br>
-        <p class='flex text-2xl underline font-mono decoration-wavy 
-        decoration-blue-500 '>AI and Creativity: The Ethical Quandries of Generative AI</p>
-
+<Post title='AI and Creativity: The Ethical Quandries of Generative AI' date='December 7, 2022' category='Ethics & Philosophy'>
         <marquee class='bg-black w-full'behavior="scroll" Scrollamount='4' loop='-1'>
             <div class='flex'>
                 <img src="/images/posts/ai-and-creativity/0.png"  width="200" height="80"/>
@@ -95,6 +87,4 @@ import Marquee from "../../components/Marquee.astro";
         <p>Spinoza famously said that &quot;There can be no free thinking without doubt.&quot; In other words, to think freely, we must be willing to question our assumptions and beliefs. This is as true of our ethical and philosophical beliefs as it is of our scientific ones. With the advent of artificial intelligence, we are now able to generate works of art, music, and literature that are indistinguishable from those created by humans. This raises questions about the nature of creativity, authorship, and even personhood. Are AI-generated works really &quot;creative&quot; in the same sense that human-generated works are? If so, does that mean that AI could be considered a &quot;person&quot; in Spinoza&apos;s sense of the term? And if AI is capable of creating works that are indistinguishable from those created by humans, does that mean that the traditional concept of copyright is obsolete? These are just some of the ethical and philosophical questions raised by AI-generated works. As we move into this new era, it is essential that we remain open-minded and willing to question our assumptions about what is possible. Only then will we be able to create a future that is truly free and open for all.</p>
         <p><br></p>
 
-    </Content>
-    
-</Layout>
+</Post>

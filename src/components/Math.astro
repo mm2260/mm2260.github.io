@@ -1,0 +1,10 @@
+---
+export interface Props {
+    body: string;
+    inline?: boolean;
+}
+
+const { body, inline=true } = Astro.props;
+---
+
+<span>{inline ? '\\(' : '$$'}{body}{inline ? '\\)' : '$$'}</span>

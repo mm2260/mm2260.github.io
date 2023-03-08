@@ -5,16 +5,24 @@ import Separator from "../components/Separator.astro";
 ---
 <Layout>
     <Content>
-        <div class='justify-center grid gap-3 pb-12'>
+        <div class='justify-center grid gap-3 py-2'>
             <h1 class='flex text-xl font-bold underline decoration-dotted underline-offset-8'>Collections:</h1>
 
-            <span class='mt-2 text-lg flex-shrink flex font-bold italic text-slate-800'>Cryptography:</span>
+            <span class='mt-2 mb-2 text-lg flex-shrink flex font-bold italic text-slate-800'>Cryptography:</span>
 
-            <ul class='pl-7 flex list-decimal'>
-                <li><a class='flex underline font-mono decoration-wavy px-2
-                decoration-red-500 hover:text-slate-50 hover:bg-black hover:decoration-red-400' 
-                href='/posts/cryptography/independent-study-ch1'>Lattices, Probabilstic Encryption, and the NTRU Problem</a></li>
-            </ul>
+            <h2 class='ml-4 font-bold font-sm decoration-dotted underline underline-offset-4 hover:text-slate-50 hover:bg-black'><a href='/fhe'>Independent Study, Spring 2023, NTRU-based Fully Homomorphic Encryption</a></h2>
+            <div class='ml-8 border-l-4 border-slate-500'>
+                <ul class='pl-7 flex-row list-decimal'>
+                    <li><a class='flex underline font-mono decoration-wavy p-2
+                    decoration-blue-500 hover:text-slate-50 hover:bg-black hover:decoration-blue-400' 
+                    href='/posts/cryptography/poly'>Cyclotomic Polynomials ϕᵢ, Algebraic Lattices, Ring-LWE!</a></li>
+        
+                    <li><a class='flex underline font-mono decoration-wavy p-2
+                        decoration-red-500 hover:text-slate-50 hover:bg-black hover:decoration-red-400' 
+                        href='/posts/cryptography/ntru'>Lattices, Probabilstic Encryption, and the NTRU Problem</a></li>
+                </ul>
+            </div>
+            
 
             <span class='flex justify-center'>⋮</span>
     
@@ -24,11 +32,10 @@ import Separator from "../components/Separator.astro";
     
             <ul class='pl-7 flex list-decimal'>
                 <li><a class='flex underline font-mono decoration-wavy px-2
-                decoration-blue-500 hover:text-slate-50 hover:bg-black hover:decoration-blue-400' href='/posts/ai-and-creativity'>AI and Creativity: The Ethical Quandries of Generative AI</a></li>
+                decoration-blue-500 hover:text-slate-50 hover:bg-black hover:decoration-blue-400' href='posts/phil/creativity'>AI and Creativity: The Ethical Quandries of Generative AI</a></li>
             </ul>
             
         </div>
     </Content>
-    <Separator/>
 
 </Layout>

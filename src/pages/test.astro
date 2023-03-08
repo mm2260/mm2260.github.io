@@ -2,6 +2,56 @@
 import Layout from "../layouts/Layout.astro";
 ---
 
-<section class='bg-black min-h-screen text-white'>
-    <h1>Test</h1>
+<section class='bg-slate-800 min-h-screen text-white'>
+    
+    <div id='blob'></div>
+    <div id='blur'></div>
+    <style>
+        #blur {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            z-index: 2;
+            backdrop-filter: blur(70px);
+        }
+        #blob {
+            height: 200px;
+            aspect-ratio: 1;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            translate: -50% -50%;
+            border-radius: 50%;
+            
+            background: linear-gradient(
+                to right, 
+                aqua,
+                mediumpurple
+            );
+            @keyframes rotate {
+                from {
+                    rotate: 0deg;
+                }
+                50% {
+                    scale: 1 1.2;
+                }
+                to {
+                    rotate: 360deg;
+                }
+            }
+            animation: rotate 20s infinite;
+        }
+    </style>
+    <script>
+        const blob = document.getElementById('blob');
+        document.body.onpointermove = event => {
+            const {clientX, clientY} = event;
+            blob.animate({
+                left: clientX+'px',
+                top: clientY+'px',
+            }, {duration: 3000, fill: 'forwards'})
+        }
+    </script>
+
+
 </section>

@@ -1,0 +1,152 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Content from "../layouts/Content.astro";
+import Separator from "../components/Separator.astro";
+---
+
+<Layout>
+    <section>
+        <div id='hero-container' class='bg-slate-800 overflow-x-scroll sm:overflow-hidden'>
+            <div id='hero-content' class='overflow-x-scroll sm:overflow-hidden'>
+                <div class='flex-row my-11'>
+                    <h1 class='text-slate-100 text-3xl ml-6 my-2'>Independent Study:</h1>
+                    <h1 class='text-slate-100 text-2xl my-2 ml-20'>NTRU-based Fully Homomorphic Encryption</h1>
+                    <h1 class='text-slate-100 text-md my-3 italic'>An exploration into Lattice-Based Cryptography, Abstract Algebra, Fully Homomorphic Encryption...</h1>
+                </div>
+            </div>
+            <div id='hero-bg'>
+                <div id='blob'></div>
+                <div id='blob2'></div>
+                <div id='blur'></div>
+                <div id='hero-bg-gif'></div>
+            </div>
+            <style>
+                #blur {
+                    height: 100%;
+                    width: 100%;
+                    /* top: 0%; */
+                    position: absolute;
+                    z-index: 2;
+                    backdrop-filter: blur(80px);
+                }
+                #blob {
+                    opacity: 0.6;
+                    height: 250px;
+                    aspect-ratio: 1;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    translate: -50% -50%;
+                    border-radius: 50%;
+                    z-index: 1;
+                    background: linear-gradient(
+                        to right, 
+                        darkslategrey,
+                        steelblue
+                    );
+                    @keyframes rotate {
+                        from {
+                            rotate: 0deg;
+                        }
+                        50% {
+                            scale: 1.5 2;
+                        }
+                        to {
+                            rotate: 360deg;
+                        }
+                    }
+                    animation: rotate 20s infinite;
+                }
+                #blob2 {
+                    opacity: 0.2;
+                    height: 700px;
+                    aspect-ratio: 1;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    translate: -50% -50%;
+                    border-radius: 50%;
+                    z-index: 0;
+                    background: linear-gradient(
+                        to right, 
+                        darkslategray,
+                        bisque
+                    );
+                    @keyframes rotate {
+                        from {
+                            rotate: -180deg;
+                        }
+                        50% {
+                            scale: 2 1;
+                            opacity: 0.7;
+                        }
+                        to {
+                            rotate: 180deg;
+                        }
+                    }
+                    animation: rotate 60s infinite;
+                }
+                #hero-container{
+                    width: 100%;
+                    height: 224px;
+                    position: relative;
+                    box-shadow: inset 0 0 10px black;
+                }
+                #hero-content{
+                    position: absolute;
+                    z-index: 2;
+                    width: 100%;
+                    justify-content: center;
+                    translate: 26%;
+                    text-shadow: black 1px 0 5px;
+                }
+                #hero-bg{
+                    position: absolute;
+                    z-index: 1;
+                    height: 100%;
+                    width: 100%;
+                }
+                #hero-bg-gif{
+                    position:absolute;
+                    z-index: 3;
+                    height: 100%;
+                    width: 100%;
+                    background-image: url("https://i.gifer.com/SemH.gif");
+                    background-repeat: repeat;
+                    background-size: 300px 300px;
+                    opacity: 0.04;
+                    /* mix-blend-mode: overlay; */
+                }
+            </style>
+        </div>
+    </section>
+
+    <br>
+
+    <Content>
+
+        <h1 class='text-xl font-bold'>Abstract:</h1>
+
+        <div class='ml-2 mb-2 pl-5 border-l-4 border-slate-500'>
+            This independent study aims to explore the mechanics of the NTRU cryptosystem, an alternative to traditional public-key cryptosystems such as RSA and elliptic curve cryptography. The study delves into the underlying mathematical concepts of abstract algebra, specifically the use of polynomial rings and lattice-based cryptography.
+            Moreover, the study discusses the potential of NTRU to be used in developing fully homomorphic encryption schemes, which allow computations to be performed on encrypted data without decrypting it first, once again — given the reactivated research into NTRU-based FHE schemes following the discovery of a concrete fatigue point for the "overstretched" regime of the NTRU problem, which previously made it insecure for use in context of FHEs. 
+        </div>
+
+        <h2 class='font-bold'><a href='https://drive.google.com/file/d/1pAk63oNowe-OP0XPDHDTAodzgRTorSwL/view?usp=sharing' class='decoration-dotted underline underline-offset-2 hover:text-slate-50 hover:bg-black'>Initial Working Proposal</a>, <a class='ml-2 decoration-dotted underline underline-offset-2 hover:text-slate-50 hover:bg-black' href='https://drive.google.com/file/d/1RzxEC3MQZTdG6kNYiIc_GBfCbpzQczPY/view?usp=sharing'>Proposal for the Independent Study</a></h2>
+
+        <h1 class='text-xl font-bold'>Posts:</h1>
+
+        <ul class='pl-7 flex-row list-decimal'>
+            <li><a class='flex underline font-mono decoration-wavy px-2
+            decoration-blue-500 hover:text-slate-50 hover:bg-black hover:decoration-blue-400' 
+            href='/posts/cryptography/poly'>Cyclotomic Polynomials ϕᵢ, Algebraic Lattices, Ring-LWE!</a></li>
+
+            <li><a class='flex underline font-mono decoration-wavy px-2
+                decoration-red-500 hover:text-slate-50 hover:bg-black hover:decoration-red-400' 
+                href='/posts/cryptography/ntru'>Lattices, Probabilstic Encryption, and the NTRU Problem</a></li>
+        </ul>
+        <span class='flex justify-center'>⋮</span>
+
+    </Content>
+
+</Layout>
